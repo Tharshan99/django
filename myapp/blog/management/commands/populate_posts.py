@@ -8,6 +8,7 @@ from django.core.management.base import BaseCommand
 class Command(BaseCommand):
     help = "This commands inserts post data"
     def handle(self, *args: Any, **options: Any):
+        # Post.objects.all().delete() 
         titles = [
             "The Future of AI",
             "Climate Change Solutions",
