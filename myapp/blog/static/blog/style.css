@@ -1,3 +1,16 @@
-body {
+html, body {
+    height: 100%;      /* So we can use full-height flex layout */
+    margin: 0;         /* Remove default body margin */
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;  /* Stacks header, main, footer in a column */
     background-color: #cccccc;
-}
+  }
+  
+  /* The main content area grows to push the footer down */
+  main {
+    flex: 1;
+  }
+  
