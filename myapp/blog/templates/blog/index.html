@@ -5,8 +5,6 @@
         <div class="row my-2">
             <div class="col">
                 <h2 >{{blog_titles | upper }}</h2>
-                <!-- <h2 >{{blog_titles | length }}</h2>
-                <h2 >{{blog_titles | truncatewords:1 }}</h2> -->
             </div>
             <div class="col-3">
                 <div class="input-group">
@@ -18,6 +16,7 @@
             </div>
         </div>
         <div class="row m-3">
+            {% include 'blog/includes/errors.html' %}
             {% if page_object %}
                 {% for post in page_object %}
                 <div class="col-4 mb-4">
@@ -25,7 +24,7 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4">
-                                    <img style="height:300; width:300;" src="{{ post.img_url }}" class="img-fluid rounded" alt="...">
+                                    <img style="height:300; width:300;" src="{{ post.formatted_img_url }}" class="img-fluid rounded" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <h5 class="card-title">{{ post.title }}</h5>
